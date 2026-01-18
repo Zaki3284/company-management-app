@@ -19,9 +19,6 @@
                                 Name
                             </th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Password
-                            </th>
-                            <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Email
                             </th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -31,5 +28,32 @@
                                 Actions
                             </th>
                         </tr>
-                    </thead>                        
+                    </thead>     
+                    
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        @foreach($users as $user)
+                        <!-- User 1 -->
+                        <tr class="user-row">
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">{{ $user->name }}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">{{ $user->email }}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">{{ $user->role }}</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <button class="edit-btn text-blue-600 hover:text-blue-900 mr-4">
+                                    <i class="fas fa-edit mr-1"></i> Edit
+                                </button>
+                                <button class="edit-btn text-blue-600 hover:text-blue-900 mr-4">
+                                    <i class="fas fa-edit mr-1"></i> delite
+                                </button>
+                            </td>
+                        @endforeach
+
+</tbody>
+
+{{ $users->links() }}
 </x-layout>
