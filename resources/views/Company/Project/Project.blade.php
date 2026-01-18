@@ -1,9 +1,11 @@
 <x-layout>
+    <x-slot:heading>
+    Projects Page
+</x-slot:heading>
     <div class="max-w-7xl mx-auto">
         <!-- Header Section -->
         <div class="mb-8">
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Users</h1>
-            <p class="text-gray-600 mt-2">A list of all the users in your account including their name, title, email and role.</p>
+            <p class="text-gray-600 mt-2">A list of all the project details in your account including their Taskes.</p>
         </div>      
         <!-- Table Container -->
         <div class="bg-white shadow overflow-hidden border border-gray-200 rounded-lg">
@@ -17,13 +19,13 @@
                                 Name
                             </th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Title
+                                Company
                             </th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Email
+                                Taskes
                             </th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                Role
+                                deadline
                             </th>
                             <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                 Actions

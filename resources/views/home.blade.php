@@ -1,4 +1,7 @@
 <x-layout>
+  <x-slot:heading>
+    Home Page
+</x-slot:heading>
 <div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
   <div aria-hidden="true" class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:-top-112 sm:ml-16 sm:translate-x-0">  </div>
   <dl class="mx-auto grid max-w-4xl grid-cols-1 place-items-center gap-x-16 gap-y-10 text-center sm:grid-cols-3">

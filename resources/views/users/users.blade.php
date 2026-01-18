@@ -1,8 +1,10 @@
 <x-layout>
+    <x-slot:heading>
+    Users Page
+</x-slot:heading>
     <div class="max-w-7xl mx-auto">
         <!-- Header Section -->
         <div class="mb-8">
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-900">Users</h1>
             <p class="text-gray-600 mt-2">A list of all the users in your account including their name, title, email and role.</p>
         </div>      
         <!-- Table Container -->
