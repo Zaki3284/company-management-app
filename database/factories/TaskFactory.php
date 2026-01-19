@@ -3,21 +3,22 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Project;
+use App\Models\User;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Task>
- */
 class TaskFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
+    protected $model = \App\Models\Task::class;
+
+    public function definition()
     {
         return [
-            //
+            'title' => $this->faker->sentence(3),
+            'project_id' => Project::factory(),
+            'employer_id' => User::factory()->state(['role' => 'employer']),
+            'Start_Date' => $this->faker->date(),
+            'End_Date' => $this->faker->date(),
+            'status' => $this->faker->randomElement(['pending', 'done']),
         ];
     }
 }

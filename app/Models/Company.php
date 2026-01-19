@@ -11,14 +11,17 @@ class Company extends Model
     use HasFactory;
 
     protected $fillable = [
-        'Name',
-        'Employees',
-        'ProjectS',
-        'NameEmployees_id',
-        'Project_id',
+        'name',
+        'user_id',
     ];
 
+
+    public function projects() {
+    return $this->hasMany(Project::class);
+}
     
-    
+    public function owner() {
+    return $this->belongsTo(User::class, 'user_id');
+}
     
 }

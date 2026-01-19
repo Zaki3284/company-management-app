@@ -15,16 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('Name');
             $table->foreignId('company_id');
-            $table->foreignId('Task_id');
-            $table->string('tasks');
+            $table->text('description');
             $table->integer("deadline");
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('projects');

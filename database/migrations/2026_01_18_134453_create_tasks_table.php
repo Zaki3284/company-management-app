@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignId('project_id');
             $table->foreignId('employer_id');
             $table->string('title');
-            $table->string('Responsable');
             $table->date('Start_Date');
             $table->date('End_Date');
             $table->string('status');

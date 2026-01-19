@@ -2,23 +2,32 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
-
+use App\Models\Company;
+use App\Models\Task;
+use App\Http\Controllers\UserController;
+use App\Models\Project;
 
 Route::get('/', function () {
     return view('home');
 });
 
 Route::get('/Company', function () {
-    return view('Company.Company');
+    $companies = Company::withCount('projects')->with('projects')->paginate(5);
+    return view('Company.Company', ['companies' => $companies]);
 });
+
+
 
 
 Route::get('/Project', function () {
-    return view('Company.Project.Project');
+    $projects = Project::withCount('tasks')->with('company')->paginate(5);
+    return view('Company.Project.Project', ['projects' => $projects]);
 });
 
+
 Route::get('/Task', function () {
-    return view('Company.Task.Task');
+    $tasks = Task::with('project', 'employer')->paginate(10);
+    return view('Company.Task.Task',['tasks'=>$tasks]);
 });
 
 
@@ -27,6 +36,13 @@ Route::get('/Employee', function () {
 });
 
 Route::get('/Users', function () {
+    return view('users.users', [
+        'users' => User::latest()->paginate(5)
+    ]);
+})->name('users.index');
 
-    return view('users.users',['users'=>User::paginate(5)]);
-});
+
+Route::resource('users', UserController::class);
+// Route::resource('companies', CompanyController::class);
+// Route::resource('projects', ProjectController::class);
+// Route::resource('tasks', TaskController::class);

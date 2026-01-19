@@ -15,7 +15,7 @@
           <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
         </div>
         <div class="flex flex-col-reverse gap-1">
-          <dt class="text-base/7 text-gray-300">Employees</dt>
+          <dt class="text-base/7 text-gray-300">Users</dt>
           <dd class="text-4xl font-semibold tracking-tight text-white">400+</dd>
         </div>
       </dl>
