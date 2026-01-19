@@ -8,15 +8,15 @@
 
         <div class="flex flex-col-reverse gap-1">
           <dt class="text-base/7 text-gray-300">Company</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">12+</dd>
+          <dd class="text-4xl font-semibold tracking-tight text-white">{{$companiesCount}}+</dd>
         </div>
         <div class="flex flex-col-reverse gap-1">
           <dt class="text-base/7 text-gray-300">Projects</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">300+</dd>
+          <dd class="text-4xl font-semibold tracking-tight text-white">{{$projectsCount}}+</dd>
         </div>
         <div class="flex flex-col-reverse gap-1">
           <dt class="text-base/7 text-gray-300">Users</dt>
-          <dd class="text-4xl font-semibold tracking-tight text-white">400+</dd>
+          <dd class="text-4xl font-semibold tracking-tight text-white">{{$usersCount}}+</dd>
         </div>
       </dl>
     </div>

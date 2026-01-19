@@ -8,7 +8,11 @@ use App\Http\Controllers\UserController;
 use App\Models\Project;
 
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        'usersCount'    => User::count(),
+        'companiesCount'=> Company::count(),
+        'projectsCount' => Project::count(),
+    ]);
 });
 
 Route::get('/Company', function () {
